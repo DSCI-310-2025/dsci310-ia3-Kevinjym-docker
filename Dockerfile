@@ -14,3 +14,8 @@ RUN Rscript -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-pr
 RUN R -e 'renv::restore(lockfile="renv.lock", confirm=FALSE)'
 
 USER rstudio
+
+
+ENTRYPOINT []
+
+CMD ["Rscript", "script.R"]
